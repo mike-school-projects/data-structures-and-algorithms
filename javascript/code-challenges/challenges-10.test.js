@@ -87,11 +87,7 @@ const grandTotal = (stores) => {
   let hourTotal = [];
   stores[0].forEach(() => hourTotal.push(0));
 
-  stores.forEach((element) => {
-    element.forEach((elementB, hourIndex) => {
-      hourTotal[hourIndex] += elementB;
-    });
-  });
+  stores.forEach((storeElement) => storeElement.forEach((hourElement, hourIndex) => hourTotal[hourIndex] += hourElement));
 
   return hourTotal;
 };

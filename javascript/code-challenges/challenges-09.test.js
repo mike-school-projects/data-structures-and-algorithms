@@ -10,14 +10,9 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   return arr.reduce((acc, element) => {
-    if (acc === undefined) {
-      acc = element;
-    }
-    if (element > acc) {
-      acc = element;
-    }
+    if (element > acc) acc = element;
     return acc;
-  });
+  }, arr[0]);
 };
 
 // console.log(maxInArray([4, 2, 7, 5, 9, 2]));
@@ -142,15 +137,7 @@ const characters = [
   },
 ];
 
-const getHouses = (arr) => {
-  let houses = [];
-
-  arr.map((element, i) => {
-    houses[i] = element.house;
-  });
-
-  return houses;
-};
+const getHouses = (arr) => arr.map((character) => character.house);
 
 // console.log(getHouses(characters));
 
@@ -167,15 +154,17 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // find object with character
+  // filter for object with character
   let tempCharacter = {};
-  arr.forEach((element) => {
+  arr.filter((element) => {
     if (element.name === character) tempCharacter = element;
   });
 
   // condense into object with name and children
   delete tempCharacter.house;
   delete tempCharacter.spouse;
+
+  // if no children, Object.values will return empty
   tempCharacter = Object.values(tempCharacter);
   if (tempCharacter.length > 1) return true; else return false;
 };
@@ -225,16 +214,18 @@ const totalCharacters = (arr) => {
 
   arr.map((element) => {
     tempArray = Object.entries(element);
+    // console.log(element);
+    // console.log(tempArray);
     tempArray.map((element) => {
-      if (element[0] === 'name') count = count+1;
-      if (element[0] === 'spouse' && element[1] !== null) count = count+1;
+      if (element[0] === 'name') count = count + 1;
+      if (element[0] === 'spouse' && element[1] !== null) count = count + 1;
       if (element[0] === 'children') count = count + element[1].length;
     });
   });
   return count;
 };
 
-// console.log(totalCharacters(characters));
+console.log(totalCharacters(characters));
 // ***** Not sure what's wrong with this.  Console.log gives me the correct answer of 27, but test script says it gives me 25.
 
 
@@ -253,11 +244,11 @@ const houseSize = (arr) => {
   let count = 0;
   let tempArray = [];
 
-  arr.map((element,i) => {
+  arr.map((element, i) => {
     tempArray = Object.entries(element);
     tempArray.map((element) => {
-      if (element[0] === 'name') count = count+1;
-      if (element[0] === 'spouse' && element[1] !== null) count = count+1;
+      if (element[0] === 'name') count = count + 1;
+      if (element[0] === 'spouse' && element[1] !== null) count = count + 1;
       if (element[0] === 'children') count = count + element[1].length;
     });
 
@@ -296,11 +287,11 @@ const houseSurvivors = (arr) => {
   let count = 0;
   let tempArray = [];
 
-  arr.map((element,i) => {
+  arr.map((element, i) => {
     tempArray = Object.entries(element);
     tempArray.map((element) => {
-      if (element[0] === 'name') count = count+1;
-      if (element[0] === 'spouse' && element[1] !== null && !deceasedSpouses.includes(element[1])) count = count+1;
+      if (element[0] === 'name') count = count + 1;
+      if (element[0] === 'spouse' && element[1] !== null && !deceasedSpouses.includes(element[1])) count = count + 1;
       if (element[0] === 'children') count = count + element[1].length;
     });
 
@@ -392,7 +383,7 @@ describe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should return the number of characters in the array', () => {
     expect(totalCharacters(characters)).toStrictEqual(27);
   });
