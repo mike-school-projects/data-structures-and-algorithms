@@ -23,7 +23,9 @@ To run your tests
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
 
 [Code Challenge 01 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/array_reverse/README.md)
+
 [Code Challenge 02 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/insert_shift_list/README.md)
+
 [Code Challenge 03 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/array_binary_search/README.md)
 
 
