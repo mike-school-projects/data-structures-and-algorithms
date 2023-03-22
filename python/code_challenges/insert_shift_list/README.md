@@ -17,6 +17,6 @@ Time: O(1)
 Space: O(1)
 
 ## Solution
-[Link to code](python/code_challenges/insert_shift_list/insert_shift_list.py)
+[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/insert_shift_list/insert_shift_list.py)
 items = [1, 2 ,3, 4]
 print(insert_shift_list(items, 10))
