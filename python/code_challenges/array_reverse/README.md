@@ -11,6 +11,6 @@ Used brute force to copy over all items from last to first.
 O(n)
 
 ## Solution
-[Link to code](python/code_challenges/array_reverse/array_reverse.py)
+[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/array_reverse/array_reverse.py)
 sample = ["car", "house", "boar"]
 reverse_list(sample)
