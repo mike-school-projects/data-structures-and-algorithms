@@ -14,7 +14,8 @@ Time: O(log N) because we're always cutting the array in half so as the list get
 Space: O(1) because the space required is always just the size of the list + a few variables
 
 ## Solution
-[Link to code]("https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/array_binary_search/binary_search.py")
+[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/array_binary_search/binary_search.py)
 
 to run single instance: python binary_search.py
+
 to run test: pytest
