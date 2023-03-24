@@ -10,13 +10,20 @@ N/A for today's code challenge
 
 
 ## Approach & Efficiency
-Split in half and check if above or below middle
-Continue until you find the key
-Time: O(log N) because we're always cutting the array in half so as the list gets bigger, time to search increased logrithmically
-Space: O(1) because the space required is always just the size of the list + a few variables
+For traversing, use while loop.
+Check to see if head is None.
+Otherwise, set current to next head and loop.
+
+Insert
+Time: O(1) because it always takes one step to insert at the head
+Space: O(n) because it takes the space of the new Node
+
+__str__
+Time: O(n) because you have to traverse the entire linked list
+Space: O(1) because you're always just returning one string
 
 ## Solution
-[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/array_binary_search/binary_search.py)
+[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/linked_list/linked_list.py)
 
 Run from python folder:
 to run single instance: python linked_list/linked_list.py
