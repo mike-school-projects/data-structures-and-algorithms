@@ -28,5 +28,4 @@ To run your tests
 
 [Code Challenge 03 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/array_binary_search/README.md)
 
-[Code Challenge 04 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/linked_list/README.md)
-
+[Code Challenge 05 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/linked_list/README.md)
