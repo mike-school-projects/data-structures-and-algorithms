@@ -17,4 +17,5 @@ def binary_search(arr, key):
 
     return middle
 
+
 print(binary_search([-131, -82, 0, 27, 42, 68, 179, 200, 201, 202], 42))
