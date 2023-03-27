@@ -13,7 +13,6 @@ Methods:
 
 [Whiteboard link](https://mikeshen926191.invisionapp.com/freehand/Code-Challenge-06-HCrcyniQF?dsid_h=f1116fd29ee82ee38584af47d81e29895c9484bf575c108bd4377ab686fcf34b&uid_h=cb08dec7ece6a9f52098e8b9edfd4330e40a53876f81c120382ecff9ccb5784d)
 
-
 ## Approach & Efficiency
 For traversing, use while loop.
 Check to see if head is None.
