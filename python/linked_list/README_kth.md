@@ -1,4 +1,4 @@
-# Challenge Linked List
+# Challenge Linked List - kth from end
 Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
 Methods:
 1. insert.  Args: value, Return: none, adds new node with value to the head of the list with O(1) time
