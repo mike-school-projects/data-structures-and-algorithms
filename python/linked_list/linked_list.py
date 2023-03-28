@@ -83,7 +83,6 @@ class LinkedList:
             raise TargetError
             return
 
-
         # linked_list is multi-nodes
         previous_node = current_node
         current_node = current_node._next
@@ -134,6 +133,34 @@ class LinkedList:
 
         return
 
+    def kth_from_end(self, k):
+        # Check for bad k input
+
+        if type(k) != int or k < 0:
+            raise TargetError
+            return
+
+        # Set both placeholders to head
+        kth_node_from_current = self.head
+        current_node = self.head
+
+        # Traverse current_node to kth position
+        for node in range(k+1):
+            if current_node is None:
+                raise TargetError
+                return
+            else:
+                current_node = current_node._next
+
+        # Traverse together until the end
+        while True:
+            if current_node is None:
+                return kth_node_from_current.value
+            else:
+                current_node = current_node._next
+                kth_node_from_current = kth_node_from_current._next
+
+
 class Node:
     # Code taken from today's lecture
     """"
@@ -157,11 +184,10 @@ class TargetError(Exception):
 
 if __name__ == '__main__':
     linked_list = LinkedList()
-    linked_list.insert("banana")
-    linked_list.insert("apple")
-    linked_list.insert("radish")
+    values = ["apples", "bananas", "cucumbers"]
+    for value in reversed(values):
+        linked_list.insert(value)
     print(str(linked_list))
-    linked_list.insert_before("radish", "zucchinni")
-    print(str(linked_list))
+    print(linked_list.kth_from_end((1)))
 
 
