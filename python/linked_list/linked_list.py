@@ -14,7 +14,7 @@ class LinkedList:
         current = self.head
 
         while current is not None:
-            values = values + '{ ' + current.value + ' } -> '
+            values = values + '{ ' + str(current.value) + ' } -> '
             current = current._next
         else:
             values = f'{values}NULL'
@@ -177,7 +177,7 @@ class Node:
         self._next = _next
 
     def __str__(self):
-        return self.value
+        return str(self.value)
 
 class TargetError(Exception):
     pass
