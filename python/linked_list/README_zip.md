@@ -32,7 +32,7 @@ Time: O(n) because we must traverse the entire LL
 Space: O(1) because it does not require any additional space besides variables
 
 ## Solution
-[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/linked_list/linked_list.py)
+[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/linked_list_zip.py)
 
 Run from python folder:
 
