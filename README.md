@@ -36,4 +36,4 @@ To run your tests
 
 [Code Challenge 08 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/linked_list/README_zip.md)
 
-[Code Challenge 09 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/stacks_and_queues/README_zip.md)
+[Code Challenge 09 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/data_structures/README_stacks_and_queues.md)
