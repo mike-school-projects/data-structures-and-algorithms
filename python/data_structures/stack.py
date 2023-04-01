@@ -1,8 +1,11 @@
-
+if __name__ == "__main__":
+    from invalid_operation_error import InvalidOperationError
+else:
+    from data_structures.invalid_operation_error import InvalidOperationError
 
 class Stack:
     """
-    Put docstring here
+    Node-based stack object class
     """
 
     def __init__(self, value=None):
@@ -25,20 +28,22 @@ class Stack:
         # Returns value from node from the top of the stack
         # Removes the node from the top of the stack
         # Raise exception when called on empty stack
-        if self.is_empty():
-            raise Exception
-        else:
-            old_top_value = self.top.value
-            self.top = self.top.next
 
-            return old_top_value
-
+        try:
+            if self.is_empty():
+                raise InvalidOperationError("Method not allowed on empty collection")
+            else:
+                old_top_value = self.top.value
+                self.top = self.top.next
+                return old_top_value
+        except InvalidOperationError:
+            raise InvalidOperationError("Method not allowed on empty collection")
 
     def peek(self):
         # Returns value of the node located at the top of the stack
         # Raise exception when called on empty stack
         if self.is_empty():
-            raise Exception
+            raise InvalidOperationError("Method not allowed on empty collection")
         else:
             return self.top.value
 
@@ -68,11 +73,7 @@ class Node:
     def __str__(self):
         return str(self.value)
 
-
 if __name__ == "__main__":
     s = Stack()
-    s.push("apple")
-    s.push("banana")
-    print(f'Top is: {s.peek()}')
-    print(f'Popped: {s.pop()}')
-    print(f'Top is: {s.peek()}')
+    s.pop()
+
