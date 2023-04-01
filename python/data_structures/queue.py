@@ -1,6 +1,11 @@
+if __name__ == "__main__":
+    from invalid_operation_error import InvalidOperationError
+else:
+    from data_structures.invalid_operation_error import InvalidOperationError
+
 class Queue:
     """
-    Put docstring here
+    Node-based queue object class
     """
 
     def __init__(self):
@@ -38,8 +43,7 @@ class Queue:
         # Should raise exception when called on empty queue
 
         if self.is_empty():
-            raise Exception
-            return
+            raise InvalidOperationError("Method not allowed on empty collection")
 
         else:
             old_front_value = self.front.value
@@ -51,7 +55,7 @@ class Queue:
         # Raise exception when called on empty stack
 
         if self.is_empty():
-            raise Exception
+            raise InvalidOperationError("Method not allowed on empty collection")
         else:
             return self.front.value
 
