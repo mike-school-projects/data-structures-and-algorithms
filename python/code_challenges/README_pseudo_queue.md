@@ -29,5 +29,3 @@ python -m code_challenges.stack_queue_pseudo
 To test, from python directory:
 
 pytest
-
-
