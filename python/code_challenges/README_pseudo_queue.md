@@ -20,6 +20,8 @@ Use 2nd stack to temporarily hold values to retrieve the front of queue / bottom
 
 ## Solution
 
+[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/stack_queue_pseudo.py)
+
 To run file, from python directory:
 
 python -m code_challenges.stack_queue_pseudo
