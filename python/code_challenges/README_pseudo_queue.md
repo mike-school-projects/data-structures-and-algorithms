@@ -8,7 +8,7 @@ Instead, this PseudoQueue class will implement our standard queue interface (the
 Internally, utilize 2 Stack instances to create and manage the queue
 
 ## Whiteboard Process
-![Whiteboard image](whiteboard11.png)
+![Whiteboard image](whiteboard_11.png)
 
 [Whiteboard link](https://mikeshen926191.invisionapp.com/freehand/Code-Challenge-11-9QNVZuJsB?dsid_h=7d136b02c954f76cdba44d36e5de621bf4a26d8bec8877beb553a718b8bb5ed3&uid_h=cb08dec7ece6a9f52098e8b9edfd4330e40a53876f81c120382ecff9ccb5784d)
 
