@@ -34,7 +34,7 @@ Space: O(1), because we don't need to create any temporary arrays.
 
 ## Solution
 
-[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/stack_queue_pseudo.py)
+[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/stack_queue_animal_shelter.py)
 
 To run file, from python directory:
 
