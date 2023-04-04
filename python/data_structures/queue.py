@@ -1,7 +1,4 @@
-if __name__ == "__main__":
-    from invalid_operation_error import InvalidOperationError
-else:
-    from data_structures.invalid_operation_error import InvalidOperationError
+from data_structures.invalid_operation_error import InvalidOperationError
 
 class Queue:
     """
