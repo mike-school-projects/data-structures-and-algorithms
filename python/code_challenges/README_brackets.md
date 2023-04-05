@@ -14,6 +14,8 @@ Return: boolean representing whether or not the brackets in the string are balan
 
 Create a stack.
 
+Loop thru string:
+
 If open bracket - push to stack.
 
 If close bracket - pop from stack.
