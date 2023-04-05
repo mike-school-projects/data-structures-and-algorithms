@@ -63,3 +63,9 @@ def test_mismatched():
     actual = multi_bracket_validation("[}")
     expected = False
     assert actual == expected
+
+# @pytest.mark.skip("TODO")
+def test_not_string():
+    actual = multi_bracket_validation(1)
+    expected = False
+    assert actual == expected

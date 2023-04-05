@@ -1,7 +1,9 @@
 from data_structures.stack import Stack
 
-
 def multi_bracket_validation(input_string):
+    if type(input_string) is not str:
+        return False
+
     stack = Stack()
 
     for char in input_string:
@@ -49,7 +51,8 @@ def match(char, char2):
 
     return False
 
-input_string = ']['
-print(multi_bracket_validation(input_string))
+if __name__ == "__main__":
+    input_string = '1'
+    print(multi_bracket_validation(input_string))
 
 
