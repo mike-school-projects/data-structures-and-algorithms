@@ -43,3 +43,5 @@ To run your tests
 [Code Challenge 12 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/README_animal_shelter.md)
 
 [Code Challenge 13 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/README_brackets.md)
+
+[Code Challenge 15 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/data_structures/README_binary_tree.md)
