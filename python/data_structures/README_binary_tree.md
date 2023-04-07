@@ -26,9 +26,8 @@ Contains
 2. Returns: boolean indicating whether or not the value is in the tree at least once.
 
 ## Whiteboard Process
-![Whiteboard image](whiteboard_15.png)
 
-[Whiteboard link](https://)
+N/A
 
 ## Approach & Efficiency
 
@@ -42,9 +41,9 @@ Space: O(1) becuase no additional data structures need to be created
 
 ## Solution
 
-[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/data_structures/binary_tree.py)
+[Link to BT code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/data_structures/binary_tree.py)
 
-[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/data_structures/binary_search_tree.py)
+[Link to BST code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/data_structures/binary_search_tree.py)
 
 To run file, from python directory:
 
