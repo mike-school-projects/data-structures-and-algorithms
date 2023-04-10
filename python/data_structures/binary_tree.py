@@ -80,15 +80,46 @@ class BinaryTree:
 
         return output
 
+    def find_maximum_value(self):
+        # No arguments
+        # Returns number
+        # Cannot call one of 3 original traversals.  Can redo it.
+
+        # Empty Tree
+        if self.root is None:
+            return None
+
+        # Root-only Tree
+        if self.root.left is None and self.root.right is None:
+            return self.root.value
+
+        max_value = self.root.value
+
+        def traverse(node):
+            nonlocal max_value
+
+            # Root
+            if node.value > max_value:
+                max_value = node.value
+
+            # Left
+            if node.left is not None:
+                traverse(node.left)
+
+            # Right
+            if node.right is not None:
+                traverse(node.right)
+
+        traverse(self.root)
+
+        return max_value
+
+
+
 if __name__ == "__main__":
     tree = BinaryTree()
+    tree.root = Node(10)
+    tree.root.left = Node(30)
+    tree.root.right = Node(-7)
+    print(tree.find_maximum_value())
 
-    tree.root = Node("a")
-    tree.root.left = Node("b")
-    tree.root.right = Node("c")
-    tree.root.left.left = Node("d")
-    tree.root.left.right = Node("e")
-    tree.root.right.left = Node("f")
-    tree.root.right.right = Node("g")
-    print(tree.pre_order())
-    # print(tree.root.left.left.left)
