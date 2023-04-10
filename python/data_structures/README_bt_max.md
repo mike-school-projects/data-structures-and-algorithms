@@ -1,4 +1,4 @@
-# Binary Tree
+# Binary Tree - find max
 
 Write the following method for the Binary Tree class
 find maximum value
