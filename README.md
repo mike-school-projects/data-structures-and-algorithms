@@ -47,3 +47,5 @@ To run your tests
 [Code Challenge 15 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/data_structures/README_binary_tree.md)
 
 [Code Challenge 16 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/data_structures/README_bt_max.md)
+
+[Code Challenge 17 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/README_bt_breadth.md)
