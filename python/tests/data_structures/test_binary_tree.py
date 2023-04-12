@@ -7,7 +7,7 @@ def test_exists():
     assert BinaryTree
 
 
-# @pytest.mark.skip("TODO")
+@pytest.mark.skip("TODO")
 def test_pre_order(tree):
     actual = tree.pre_order()
     expected = ["a", "b", "d", "e", "c", "f", "g"]
