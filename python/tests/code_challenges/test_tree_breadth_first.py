@@ -90,3 +90,25 @@ def test_example_from_reading():
     actual = breadth_first(tree)
 
     assert actual == expected
+
+# @pytest.mark.skip("TODO")
+def test_left_nodes():
+    tree = BinaryTree()
+    tree.root = Node("apples")
+    tree.root.left = Node("bananas")
+    tree.root.left.left = Node("cucumbers")
+    tree.root.left.left.left = Node("dates")
+    expected = ["apples", "bananas", "cucumbers", "dates"]
+    actual = breadth_first(tree)
+    assert actual == expected
+
+# @pytest.mark.skip("TODO")
+def test_right_nodes():
+    tree = BinaryTree()
+    tree.root = Node("apples")
+    tree.root.right = Node("bananas")
+    tree.root.right.right = Node("cucumbers")
+    tree.root.right.right.right = Node("dates")
+    expected = ["apples", "bananas", "cucumbers", "dates"]
+    actual = breadth_first(tree)
+    assert actual == expected
