@@ -1,4 +1,4 @@
-def insertion_sort(lst):
+def insertion_sort_2(lst):
     def insert_one(value):
         nonlocal sorted
         idx = 0
@@ -22,6 +22,34 @@ def insertion_sort(lst):
     for index in range(1, len(lst)):
         value = lst[index]
         insert_one(value)
+
+    return sorted
+
+def insertion_sort(lst):
+    sorted = []
+    sorted.append(lst[0])
+
+    def insert(sorted, value):
+        i_inner = 0
+        while i_inner < len(sorted) and value > sorted[i_inner]:
+            i_inner += 1
+
+        while i_inner < len(sorted):
+            temp = sorted[i_inner]
+            sorted[i_inner] = value
+            value = temp
+            i_inner += 1
+
+        sorted.append(value)
+
+        return sorted
+
+
+
+    for i_outer in range(1, len(lst)):
+        sorted = insert(sorted, lst[i_outer])
+
+
 
     return sorted
 
