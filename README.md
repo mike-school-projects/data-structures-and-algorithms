@@ -51,3 +51,5 @@ To run your tests
 [Code Challenge 17 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/README_bt_breadth.md)
 
 [Code Challenge 18 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/README_bt_fizz_buzz.md)
+
+[Code Challenge 26 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/sorting/insertion/README.md)
