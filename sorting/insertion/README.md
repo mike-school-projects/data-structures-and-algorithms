@@ -139,3 +139,15 @@ InsertionSort(int[] input)
 Time: O(n!) because in worst case, for each item in the input list, we will have to iterate through the entire sorted list
 
 Space: O(n) because we need to create 1 new data structure to hold the new list
+
+## Solution
+
+[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/sorting/insertion/insertion_sort.py)
+
+To run file, from sorting/insertion directory:
+
+python insertion_sort.py
+
+To test, from sorting/insertion directory:
+
+pytest
