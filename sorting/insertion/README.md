@@ -34,6 +34,8 @@ InsertionSort(int[] input)
 ```
 
 ## Trace
+```table
+
 
 | Line            |                                             | sorted                 | value | i (outer) |  | i (inner) | value | sorted[i] | sorted.length | temp |
 | --------------- | ------------------------------------------- | ---------------------- | ----- | --------- |  | --------- | ----- | --------- | ------------- | ---- |
@@ -130,6 +132,7 @@ InsertionSort(int[] input)
 |                 | set i to i + 1                              |                        |       |           |  | 5         |       |           |               |      |
 |                 | WHILE i < sorted.length                     |                        |       |           |  | 5         |       |           | 5             |      |
 |                 | append value to sorted                      | [4, 8, 15, 16, 23, 42] |       |           |  |           |       |           |               |      |
+```
 
 ## Efficiency
 
