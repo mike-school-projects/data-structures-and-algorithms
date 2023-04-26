@@ -176,7 +176,7 @@ Space: O(n) because we need to create 1 new data structure to hold the new list
 
 ## Solution
 
-[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/sorting/insertion/insertion_sort.py)
+[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/sorting/merge/merge.py)
 
 To run file, from sorting/merge directory:
 
