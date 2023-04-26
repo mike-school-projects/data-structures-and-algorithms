@@ -43,5 +43,3 @@ python movies.py
 To test, from code_challenges/movies/ directory:
 
 pytest
-
-
