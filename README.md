@@ -57,3 +57,5 @@ To run your tests
 [Code Challenge 27 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/sorting/merge/README.md)
 
 [Code Challenge 28 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/movies/README.md)
+
+[Code Challenge 30 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/data_structures/README_hash.md)
