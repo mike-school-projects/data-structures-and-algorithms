@@ -1,5 +1,5 @@
 import pytest
-from code_challenges.hashtable_repeated_word import first_repeated_word
+from code_challenges.hashtable_repeated_word import first_repeated_word, clean
 
 
 # @pytest.mark.skip("TODO")
@@ -85,3 +85,32 @@ def test_space():
     expected = None
     assert actual == expected
 
+def test_clean_1():
+    actual = clean("apple!")
+    expected = 'apple'
+    assert actual == expected
+
+def test_clean_2():
+    actual = clean("!apple!")
+    expected = '!apple'
+    assert actual == expected
+
+def test_clean_3():
+    actual = clean("!ap!ple!")
+    expected = '!ap!ple'
+    assert actual == expected
+
+def test_sample_1():
+    actual = first_repeated_word("Once upon a time, there was a brave princess who...")
+    expected = 'a'
+    assert actual == expected
+
+def test_sample_2():
+    actual = first_repeated_word("It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only...")
+    expected = 'it'
+    assert actual == expected
+
+def test_sample_3():
+    actual = first_repeated_word("It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York...")
+    expected = 'summer'
+    assert actual == expected
