@@ -39,5 +39,3 @@ python -m code_challenges.tree_intersection
 To test, from python directory:
 
 pytest
-
-
