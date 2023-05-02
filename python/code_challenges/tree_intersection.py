@@ -1,72 +1,63 @@
-from data_structures.binary_tree import BinaryTree
 from data_structures.binary_tree import BinaryTree, Node
+from data_structures.hashtable import Hashtable
 from data_structures.queue import Queue
 
 def tree_intersection(tree_a, tree_b):
-    # Tree A - pre-order traverse to list
+    # Create temp variables
+    hashtable = Hashtable(4096)
     tree_a_list = tree_a.pre_order()
+    tree_b_list = tree_b.pre_order()
     output_list = []
 
-    # Tree B - pre-order traverse
-    # If current value is in tree a list, append to output list and remove from tree a list
-    def traverse(current_node):
-        nonlocal tree_a_list
-        nonlocal output_list
 
-        if not current_node:
-            return
+    # Check empty
+    if empty_tree(tree_a) or empty_tree(tree_b):
+        return output_list
 
-        # Root
-        if current_node.value in tree_a_list:
-            output_list.append(current_node.value)
-            tree_a_list.remove(current_node.value)
+    # Add tree A to hashtable
+    for item in tree_a_list:
+        hashtable.set(item, None)
 
-        if current_node.left:
-            traverse(current_node.left)
+    keys = hashtable.keys()
 
-        if current_node.right:
-            traverse(current_node.right)
+    # Check to see if tree B items are in list
+    for item in tree_b_list:
+        if item in hashtable.keys():
+            output_list.append(item)
+            keys.remove(item)
 
-    traverse(tree_b.root)
+    return sorted(output_list)
 
-    return output_list
+def empty_tree(tree):
+    if tree.root.value == None and tree.root.right == None and tree.root.left == None:
+        return True
+    return False
+
+
+
+def add_values_to_empty_tree(tree, values):
+    """
+    Helper function to add given values to BinaryTree
+    """
+    tree.root = Node(values.pop())
+    q = Queue()
+
+    q.enqueue(tree.root)
+
+    while values:
+        node = q.dequeue()
+        node.left = Node(values.pop())
+        node.right = Node(values.pop()) if values else None
+        q.enqueue(node.left)
+        q.enqueue(node.right)
 
 if __name__ == "__main__":
     tree_a = BinaryTree()
-    tree_a.root = Node(500)
-    tree_a.root.left = Node(300)
-    tree_a.root.right = Node(175)
-
-    tree_a.root.left.left = Node(125)
-    tree_a.root.left.right = Node(350)
-
-    tree_a.root.left.left.left = Node(75)
-    tree_a.root.left.left.right = Node(250)
-
-    tree_a.root.left.right.left = Node(100)
-    tree_a.root.left.right.right = Node(150)
-
-    tree_a.root.right.left = Node(200)
-    tree_a.root.right.right = Node(160)
-
-
+    # values = [150, 100, 250, 75, 160, 200, 350, 125, 175, 300, 500]
+    # add_values_to_empty_tree(tree_a, values)
 
     tree_b = BinaryTree()
-    tree_b.root = Node(42)
-    tree_b.root.left = Node(100)
-    tree_b.root.right = Node(100)
-
-    tree_b.root.left.left = Node(15)
-    tree_b.root.left.right = Node(160)
-
-    tree_b.root.left.left.left = Node(125)
-    tree_b.root.left.left.right = Node(175)
-
-    tree_b.root.left.right.left = Node(4)
-    tree_b.root.left.right.right = Node(500)
-
-    tree_b.root.right.left = Node(200)
-    tree_b.root.right.right = Node(350)
-
+    # values = [42, 100, 100, 15, 160, 200, 350, 125, 175, 4, 500]
+    # add_values_to_empty_tree(tree_b, values)
 
     print(tree_intersection(tree_a, tree_b))

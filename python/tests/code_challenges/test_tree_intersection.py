@@ -8,7 +8,7 @@ def test_exists():
     assert tree_intersection
 
 
-# @pytest.mark.skip("TODO")
+@pytest.mark.skip("TODO")
 def test_tree_intersection():
 
     tree_a = BinaryTree()
@@ -23,6 +23,77 @@ def test_tree_intersection():
     expected = [125, 175, 100, 160, 500, 200, 350]
 
     assert sorted(actual) == sorted(expected)
+
+def test_tree_empty():
+
+    tree_a = BinaryTree()
+    tree_b = BinaryTree()
+    actual = tree_intersection(tree_a, tree_b)
+    expected = []
+
+    assert sorted(actual) == sorted(expected)
+
+def test_tree_duplicates():
+
+    tree_a = BinaryTree()
+    values = [100, 100, 100]
+    add_values_to_empty_tree(tree_a, values)
+
+    tree_b = BinaryTree()
+    values = [100]
+    add_values_to_empty_tree(tree_b, values)
+
+    actual = tree_intersection(tree_a, tree_b)
+    expected = [100]
+
+    assert sorted(actual) == sorted(expected)
+
+def test_tree_duplicates_alt():
+
+    tree_a = BinaryTree()
+    values = [100]
+    add_values_to_empty_tree(tree_a, values)
+
+    tree_b = BinaryTree()
+    values = [100, 100, 100]
+    add_values_to_empty_tree(tree_b, values)
+
+    actual = tree_intersection(tree_a, tree_b)
+    expected = [100]
+
+    assert sorted(actual) == sorted(expected)
+
+def test_tree_strings():
+
+    tree_a = BinaryTree()
+    values = [1, 2, 3, 4, 'a']
+    add_values_to_empty_tree(tree_a, values)
+
+    tree_b = BinaryTree()
+    values = [5, 6, 7, 'a', 8]
+    add_values_to_empty_tree(tree_b, values)
+
+    actual = tree_intersection(tree_a, tree_b)
+    expected = ['a']
+
+    assert sorted(actual) == sorted(expected)
+
+
+def test_tree_no_match():
+
+    tree_a = BinaryTree()
+    values = [1,2,3,4,5]
+    add_values_to_empty_tree(tree_a, values)
+
+    tree_b = BinaryTree()
+    values = [6,7,8,9,10]
+    add_values_to_empty_tree(tree_b, values)
+
+    actual = tree_intersection(tree_a, tree_b)
+    expected = []
+
+    assert sorted(actual) == sorted(expected)
+
 
 
 def add_values_to_empty_tree(tree, values):
