@@ -1,5 +1,5 @@
 import pytest
-from code_challenges.tree_intersection import tree_intersection
+from code_challenges.tree_intersection import tree_intersection, empty_tree
 from data_structures.binary_tree import BinaryTree, Node
 from data_structures.queue import Queue
 
@@ -94,6 +94,36 @@ def test_tree_no_match():
 
     assert sorted(actual) == sorted(expected)
 
+def test_empty_tree_1():
+
+    tree_a = BinaryTree()
+    values = [1,2,3,4,5]
+    add_values_to_empty_tree(tree_a, values)
+
+    actual = empty_tree(tree_a)
+    expected = False
+
+    assert actual == expected
+
+def test_empty_tree_2():
+
+    tree_a = BinaryTree()
+
+    actual = empty_tree(tree_a)
+    expected = True
+
+    assert actual == expected
+
+def test_empty_tree_3():
+
+    tree_a = BinaryTree()
+    values = [None]
+    add_values_to_empty_tree(tree_a, values)
+
+    actual = empty_tree(tree_a)
+    expected = True
+
+    assert actual == expected
 
 
 def add_values_to_empty_tree(tree, values):
