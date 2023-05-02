@@ -26,8 +26,9 @@ class BinaryTree:
 
     def pre_order(self, values=[]):
         # Root -> left -> right
+        output = []
 
-        def traverse(current_node, output):
+        def traverse(current_node):
             if not current_node:
                 return
 
@@ -36,15 +37,17 @@ class BinaryTree:
 
             # Left
             if current_node.left:
-                traverse(current_node.left, output)
+                traverse(current_node.left)
 
             # Right
             if current_node.right:
-                traverse(current_node.right, output)
+                traverse(current_node.right)
 
-        traverse(self.root, values)
+            return output
 
-        return values
+        traverse(self.root)
+
+        return output
 
     def in_order(self):
         # left -> root -> right
