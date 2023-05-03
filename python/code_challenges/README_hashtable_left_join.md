@@ -33,7 +33,7 @@ Space: O(n) because we need to create 1 temporary hashtable
 
 ## Solution
 
-[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/hashtable_left_join)
+[Link to code](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/hashtable_left_join.py)
 
 To run file, from python directory:
 
