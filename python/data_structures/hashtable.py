@@ -8,6 +8,12 @@ class Hashtable:
         self._buckets = size * [None]
         self.key_list = list()
 
+    def __str__(self):
+        output_list = list()
+        for key in self.key_list:
+            output_list.append([key, self.get(key)])
+        return str(output_list)
+
     def set(self, key, value):
         # Hash the key, set the key and value pair in the table
         # If key already exists, replace it's value with the value argument
@@ -56,6 +62,7 @@ class Hashtable:
         # divide by length of bucket
         index = index % self._size
         return index
+
 
 
 class Node:
