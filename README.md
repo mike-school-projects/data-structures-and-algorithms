@@ -65,3 +65,5 @@ To run your tests
 [Code Challenge 32 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/README_tree_intersection.md)
 
 [Code Challenge 33 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/code_challenges/README_hashtable_left_join.md)
+
+[Code Challenge 35 readme](https://github.com/mikeshen7/data-structures-and-algorithms/blob/main/python/data_structures/README_graph.md)
