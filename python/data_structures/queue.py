@@ -9,10 +9,6 @@ class Queue:
         self.front = None
         self.back = None
 
-    def some_method(self):
-        # method body here
-        pass
-
     def enqueue(self, value_arg):
         # adds a new node with that value to the back of the queue with an O(1) Time performance
 

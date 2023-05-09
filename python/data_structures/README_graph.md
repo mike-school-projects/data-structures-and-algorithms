@@ -25,19 +25,37 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 •	Arguments: none
 •	Returns the total number of nodes in the graph
 •	0 if there are none
+### breadth_first
+•	Arguments: node
+•	Returns the list of
+•	0 if there are none
 
 
 ## Whiteboard Process
 
-N/A
+![Breadth First Whiteboard image](whiteboard36.png)
+
+[Whiteboard link](https://www.figma.com/file/TYHQxAoEjAQwJQYiZTyL1u/Code-Challenge-36?type=whiteboard&node-id=0%3A1&t=bgCOlAKUYlIItFMs-1)
 
 ## Approach & Efficiency
 
 Use a dict to store the adjacency list, with node as key and value as a list of edges.  Dicts are fash look-up.
 
-Time: O(1) because dicts have O(1) operation time and we never use any other data structures that we might need to loop or iterate through.
+Breadth-first:
+- Create output_list variable to hold vertexes visited
+- Create queue to do breadth-first traversal
+- Add root node to the queue
+- While queue is not empty:
+- dequeue and save to current
+- If not in output_list
+- add current to output_list
+- Add current’s edges to queue
+- Convert from vertex to names
+- Return names
 
-Space: O(n) because for every node or edge, we have to add another object
+Time: O(n) because we go through all the connected nodes
+
+Space: O(n) because we have a list and a queue with all the connected nodes
 
 ## Solution
 
