@@ -42,5 +42,3 @@ python -m code_challenges.hashtable_left_join
 To test, from python directory:
 
 pytest
-
-
