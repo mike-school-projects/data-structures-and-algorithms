@@ -2,35 +2,52 @@ import pytest
 from data_structures.graph import Graph
 from code_challenges.graph_business_trip import direct_flights
 
+# NOTE: Tests modified to match Feature Tasks (different outputs)
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_metroville_pandora(planets):
     names = ["Metroville", "Pandora"]
-    assert direct_flights(planets, names) == (True, 82)
+    assert direct_flights(planets, names) == 82
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_metroville_monstropolis(planets):
     names = ["Metroville", "New Monstropolis"]
-    assert direct_flights(planets, names) == (True, 105)
+    assert direct_flights(planets, names) == 105
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_arendelle_monstropolis_naboo(planets):
     names = ["Arendelle", "New Monstropolis", "Naboo"]
-    assert direct_flights(planets, names) == (True, 115)
+    assert direct_flights(planets, names) == 115
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_naboo_pandora(planets):
     names = ["Naboo", "Pandora"]
-    assert direct_flights(planets, names) == (False, 0)
+    assert direct_flights(planets, names) is None
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_narnia_arendelle_naboo(planets):
     names = ["Narnia", "Arendelle", "Naboo"]
-    assert direct_flights(planets, names) == (False, 0)
+    assert direct_flights(planets, names) is None
+
+
+# @pytest.mark.skip("TODO")
+def test_narnia_naboo_arendelle(planets):
+    names = ["Narnia", "Naboo", "Arendelle"]
+    assert direct_flights(planets, names) is None
+
+# @pytest.mark.skip("TODO")
+def test_four(planets):
+    names = ["Pandora", "Arendelle", "Metroville", "Naboo"]
+    assert direct_flights(planets, names) == 275
+
+# @pytest.mark.skip("TODO")
+def test_invalid(planets):
+    names = ["Pandora", "Elsewhere", "Metroville", "Naboo"]
+    assert direct_flights(planets, names) is None
 
 
 @pytest.fixture
