@@ -38,5 +38,3 @@ python -m code_challenges.graph_business_trip
 To test, from python directory:
 
 pytest
-
-
