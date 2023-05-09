@@ -6,7 +6,7 @@ def test_exists():
     assert Graph
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_bfs(graph):
     nodes = graph.get_nodes()
     root = nodes[0]
@@ -16,6 +16,25 @@ def test_bfs(graph):
     assert actual == expected
 
     # DANGER: Metroville/Monstropolis could be switched as well as Narnia/Naboo and still be valid BFS. What to do?
+
+# @pytest.mark.skip("TODO")
+def test_bfs_1(graph):
+    nodes = graph.get_nodes()
+    root = nodes[1]
+    print(root.value)
+    actual = graph.breadth_first(root)
+    expected = ["Arendelle", "Pandora",  "Metroville", "Monstropolis", "Narnia", "Naboo"]
+    assert actual == expected
+
+# @pytest.mark.skip("TODO")
+def test_bfs_2(graph):
+    nodes = graph.get_nodes()
+    root = nodes[2]
+    print(root.value)
+    actual = graph.breadth_first(root)
+    expected = ['Metroville', 'Arendelle', 'Monstropolis', 'Narnia', 'Pandora', 'Naboo']
+    assert actual == expected
+
 
 
 @pytest.fixture
