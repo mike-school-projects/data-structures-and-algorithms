@@ -37,7 +37,7 @@ def test_island_crowded(graph):
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_mates_crowded(graph):
     lady = graph.add_node("lady")
     the_tramp = graph.add_node("the tramp")

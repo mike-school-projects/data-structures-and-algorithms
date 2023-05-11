@@ -28,7 +28,6 @@ class Graph:
             if node1 == node[0]:
                 node[1].append(Edge(node2, weight))
 
-
     def get_nodes(self):
         output_nodes = list()
         for node in self.node_list:
@@ -41,7 +40,6 @@ class Graph:
             if input_node == node[0]:
                 output_list = node[1]
         return output_list
-
 
     def size(self):
         return len(self.node_list)
@@ -76,6 +74,34 @@ class Graph:
 
         return neighbor_names
 
+    def depth_first_search(self, node, visited=list()):
+        # Already in node list, stop recursion
+        if node.value in visited:
+            return visited
+
+        # Add this node to visited list
+        list_of_nodes = list()
+        for node_edge_pair in self.node_list:
+            list_of_nodes.append(node_edge_pair[0].value)
+
+        # Check if node is in graph
+        if node.value not in list_of_nodes:
+            return visited
+
+        # Add to visited
+        visited.append(node.value)
+
+        # Get list of edges
+        edge_list = self.get_neighbors(node)
+
+        # recursive call
+        for edge in edge_list:
+            if edge.vertex.value not in visited:
+                visited = self.depth_first_search(edge.vertex)
+
+        return visited
+
+
 
 class Vertex:
     def __init__(self, value):
@@ -84,50 +110,45 @@ class Vertex:
     def __str__(self):
         return str(self.value)
 
-
 class Edge:
     def __init__(self, node, weight=0):
         self.vertex = node
         self.weight = weight
 
 
+def graph_and_root():
+    letters = Graph()
+
+    a = letters.add_node("a")
+    b = letters.add_node("b")
+    c = letters.add_node("c")
+    d = letters.add_node("d")
+    e = letters.add_node("e")
+    f = letters.add_node("f")
+    g = letters.add_node("g")
+    h = letters.add_node("h")
+
+    letters.add_edge(a, b)
+    letters.add_edge(b, c)
+    letters.add_edge(c, g)
+    letters.add_edge(a, d)
+
+    letters.add_edge(d, e)
+    letters.add_edge(d, h)
+    letters.add_edge(d, f)
+
+    letters.add_edge(h, f)
+
+
+    return letters
+
+
 if __name__ == "__main__":
 
-    realms = Graph()
+    graph = Graph()
+    root = Vertex("some other node")
+    print(graph.depth_first_search(root))
 
-    pandora = realms.add_node("Pandora")
-    arendelle = realms.add_node("Arendelle")
-    metroville = realms.add_node("Metroville")
-    monstropolis = realms.add_node("Monstropolis")
-    narnia = realms.add_node("Narnia")
-    naboo = realms.add_node("Naboo")
-
-    realms.add_edge(pandora, arendelle)
-
-    realms.add_edge(arendelle, pandora)
-    realms.add_edge(arendelle, metroville)
-    realms.add_edge(arendelle, monstropolis)
-
-    realms.add_edge(metroville, arendelle)
-    realms.add_edge(metroville, monstropolis)
-    realms.add_edge(metroville, narnia)
-
-    realms.add_edge(monstropolis, arendelle)
-    realms.add_edge(monstropolis, metroville)
-    realms.add_edge(monstropolis, naboo)
-
-    realms.add_edge(narnia, metroville)
-    realms.add_edge(narnia, naboo)
-
-    realms.add_edge(naboo, metroville)
-    realms.add_edge(naboo, monstropolis)
-    realms.add_edge(naboo, narnia)
-
-
-    nodes = realms.get_nodes()
-    edges = realms.get_neighbors(naboo)
-    for edge in edges:
-        print(edge.vertex.value)
 
 
 
